@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.7.0
+apiversion: 2
+architectures: armv7 arm64 i386 x86_64
+description: StreetHawk Growth Module lets your user share your application with friends. Also the feature can be extended to invite the new user to a deeplinked page inside your application. Create a Share button inside your application and call originateShareWithSourceSelection to generate the share url. StreetHawk SDK will then ask user ways to share the generated url. That is (email, post on Facebook etc). Below are the APIs which generates sharable URL. A scheme for deeplinking is required for StreetHawk growth.
+author: StreetHawk
+license: Apache Public License
+copyright: 2016 StreetHawk
+
+# these should not be edited
+name: Growth
+moduleid: com.streethawk.shgrowth
+guid: b68abd4d-1c7c-44aa-9ca5-e7e46f9a45d5
+platform: iphone
+minsdk: 5.0.0.GA

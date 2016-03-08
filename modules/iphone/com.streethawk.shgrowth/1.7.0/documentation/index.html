@@ -1,0 +1,30 @@
+<h1>Growth Module</h1>
+<h2>Description</h2>
+<p>StreetHawk Growth module lets your user share your application with friends. Also the feature can be extended to invite the new user to a deeplinked page inside your application. Create a Share button inside your application and call originateShareWithSourceSelection to generate the share url. StreetHawk SDK will then ask user ways to share the generated url. That is (email, post on Facebook etc). Below are the APIs which generates sharable URL. A scheme for deeplinking is required for StreetHawk growth.</p>
+<h2>Accessing the Growth Module</h2>
+<p>To access this module from JavaScript, you would do the following:</p>
+<pre><code>var shGrowth = require("com.streethawk.Growth");
+</code></pre>
+<p>The shGrowth variable is a reference to the Module object.</p>
+<h2>Reference</h2>
+<p>https://streethawk.freshdesk.com/solution/articles/12000000939-growth</p>
+<h3>growth.function</h3>
+<ul>
+<li>
+<p>Get growth url callback handler</p>
+<p>function growthShareCallback(e)
+{
+    alert("Callback for growth share url: " + e.result);
+}
+//Get growth share url by callback
+shGrowth.originateShareWithCampaign("ShareViaFacebook", "Facebook", "cpc", "best chocolate chip cookie recipe", "facebookAdd", "tisample://homepage?recipe=chocolatechipcookie", "http://recipeApp.com/chocolatechipcookie", {shareurl: growthShareCallback}); //must use key "shareurl"</p>
+</li>
+<li>
+<p>Share by predefined channels</p>
+<p>shGrowth.originateShareWithSourceSelection("ShareViaFacebook", "tisample://homepage?recipe=chocolatechipcookie", "http://recipeApp.com/chocolatechipcookie");</p>
+</li>
+</ul>
+<h2>Author</h2>
+<p>support@streethawk.com</p>
+<h2>License</h2>
+<p>Apache</p>
